@@ -183,7 +183,7 @@ if (isset($_POST['enviarCoordinacion'])) {
 	<form class="formDirec" action="" method="POST">
 		<div>
 			<!-- <---- Sele asigna el "class=DCselect" para que se vincule con el id de la direccion -->
-			<select class="selectCoord" name="direcc"  onChange="valida()">
+			<select class="selectCoord" name="direcc"  onChange="valida()" required>
 				<option value="0" disabled selected>Selecciona una Dirección :</option>
 				<?php
 				// <--- Obtiene todas las direcciones y las ordena segun su Id
