@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-02-2020 a las 23:22:18
+-- Tiempo de generación: 17-02-2020 a las 00:31:17
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 7.1.7
 
@@ -31,16 +31,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `t_coordinaciones` (
   `Id_coordinacion` int(11) NOT NULL,
   `Id_direcciones` int(11) DEFAULT NULL,
-  `nombre` varchar(255) DEFAULT NULL
+  `nombre_coordinacion` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `t_coordinaciones`
---
-
-INSERT INTO `t_coordinaciones` (`Id_coordinacion`, `Id_direcciones`, `nombre`) VALUES
-(13, 7, 'asd'),
-(14, 7, 'test');
 
 -- --------------------------------------------------------
 
@@ -50,16 +42,8 @@ INSERT INTO `t_coordinaciones` (`Id_coordinacion`, `Id_direcciones`, `nombre`) V
 
 CREATE TABLE `t_direcciones` (
   `Id_direcciones` int(11) NOT NULL,
-  `nombre` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL
+  `nombre_direccion` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `t_direcciones`
---
-
-INSERT INTO `t_direcciones` (`Id_direcciones`, `nombre`) VALUES
-(7, 'test'),
-(8, 'tetst');
 
 -- --------------------------------------------------------
 
@@ -137,7 +121,7 @@ ALTER TABLE `t_usuarios`
 -- AUTO_INCREMENT de la tabla `t_coordinaciones`
 --
 ALTER TABLE `t_coordinaciones`
-  MODIFY `Id_coordinacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `Id_coordinacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT de la tabla `t_direcciones`
 --
@@ -147,7 +131,7 @@ ALTER TABLE `t_direcciones`
 -- AUTO_INCREMENT de la tabla `t_expediente`
 --
 ALTER TABLE `t_expediente`
-  MODIFY `Id_expediente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `Id_expediente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `t_usuarios`
 --
