@@ -31,6 +31,7 @@ $(document).ready(function(){
     
     // ENVIAR FORMULARIO
     $('#EnviarBoton').on('click', function(){
+      
       var datos=$('#comboExpediente').serialize();
 			$.ajax({
 				type:"POST",

@@ -125,6 +125,24 @@
 <?php   
 
 if (isset($_POST['enviarCoordinacion'])) {
+
+	if(!isset($_POST['direcc'])){ ?>
+		<div id="myModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<p>Error seleccione una dirección
+			</p>
+			<br>
+			<button type="button" id="xModal" class="btn btn-default" >
+				<span class="glyphicon glyphicon-remove"></span>
+				Cerrar
+			</button>
+		</div>
+	</div> <?php
+	} else {
+
+	
+
 	$coordinacion = $_POST["coordi"];
 	$direccion2 = $_POST["direcc"];
 
@@ -170,6 +188,7 @@ if (isset($_POST['enviarCoordinacion'])) {
 		</div>
 <?php	}
 
+	}
 	// Inserta Coordinacion
 }
 
@@ -183,7 +202,7 @@ if (isset($_POST['enviarCoordinacion'])) {
 	<form class="formDirec" action="" method="POST">
 		<div>
 			<!-- <---- Sele asigna el "class=DCselect" para que se vincule con el id de la direccion -->
-			<select class="selectCoord" name="direcc"  onChange="valida()" required>
+			<select class="selectCoord" name="direcc" required>
 				<option value="0" disabled selected>Selecciona una Dirección :</option>
 				<?php
 				// <--- Obtiene todas las direcciones y las ordena segun su Id
@@ -212,8 +231,10 @@ if (isset($_POST['enviarCoordinacion'])) {
 	<script>
 		var modal = document.getElementById('myModal');
 		var btn = document.getElementById("xModal");
-		btn.onclick = function() {
-			modal.style.display = "none";
+		if(btn!==null){
+			btn.onclick = function() {
+				modal.style.display = "none";
+			}
 		}
 
 	</script>

@@ -193,8 +193,10 @@
 		<script>
 			var modal = document.getElementById('myModal');
 			var btn = document.getElementById("xModal");
-			btn.onclick = function() {
-				modal.style.display = "none";
+			if(btn!==null){
+				btn.onclick = function() {
+					modal.style.display = "none";
+				}
 			}
 
 		</script>
