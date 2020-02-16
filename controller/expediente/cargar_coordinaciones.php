@@ -7,7 +7,7 @@ function getCoordinacion(){
   $result = $mysqli->query($query);
   $coordinacion = '<option class="opExp" value="0">Elige una opción</option>';
   while($row = $result->fetch_array(MYSQLI_ASSOC)){
-    $coordinacion .= "<option class='opExp' value='$row[Id_coordinacion]'>$row[nombre]</option>";
+    $coordinacion .= "<option class='opExp' value='$row[Id_coordinacion]'>$row[nombre_coordinacion]</option>";
   }
   return $coordinacion;
 }

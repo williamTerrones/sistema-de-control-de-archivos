@@ -69,23 +69,23 @@
 			-------------------------->
 			<div class="containerArea">
 				<?php
-					$query = "SELECT Id_direcciones, nombre FROM T_DIRECCIONES ORDER BY Id_direcciones";
+					$query = "SELECT Id_direcciones, nombre_direccion FROM T_DIRECCIONES ORDER BY Id_direcciones";
 					$resultado=$mysqli->query($query);
 				?>
 				<?php while($row = $resultado->fetch_assoc()) { ?>
 					<div class="card">
 						<div class="cardTitulo">
-								<h4><?php echo $row['nombre']; ?></h4>
+								<h4><?php echo $row['nombre_direccion']; ?></h4>
 						</div>
 						<div class="rowTableDC">
-							<?php if($row['nombre'] === $row['nombre']){ ?>
+							<?php if($row['nombre_direccion'] === $row['nombre_direccion']){ ?>
 								<table>
 									<?php 
-										$query2 = "SELECT Id_coordinacion, nombre FROM T_COORDINACIONES WHERE id_direcciones = {$row['Id_direcciones']}"; 
+										$query2 = "SELECT Id_coordinacion, nombre_coordinacion FROM T_COORDINACIONES WHERE id_direcciones = {$row['Id_direcciones']}"; 
 										$resultado2=$mysqli->query($query2);
 										while($row2 = $resultado2->fetch_assoc()) { ?>
 											<tr>
-												<td> <a href="resumen.php?coordinacionTitulo=<?php echo $row2['nombre']?>&coordinacionID=<?php echo $row2['Id_coordinacion']?>&direccionID=<?php echo $row['Id_direcciones']?>"> <?php echo $row2['nombre']; ?></a></td>
+												<td> <a href="resumen.php?coordinacionTitulo=<?php echo $row2['nombre_coordinacion']?>&coordinacionID=<?php echo $row2['Id_coordinacion']?>&direccionID=<?php echo $row['Id_direcciones']?>"> <?php echo $row2['nombre_coordinacion']; ?></a></td>
 											</tr>                           
 									<?php } ?>
 								</table> 

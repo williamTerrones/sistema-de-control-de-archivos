@@ -132,17 +132,17 @@
 					</thead>
 					<tbody>
 					<?php while($row = $datos->fetch_assoc()) { 
-						$direccion = $mysqli->query("SELECT nombre FROM T_DIRECCIONES WHERE Id_direcciones = {$row['Id_direcciones']}");
+						$direccion = $mysqli->query("SELECT nombre_direccion FROM T_DIRECCIONES WHERE Id_direcciones = {$row['Id_direcciones']}");
 						$direccionNueva = $direccion->fetch_assoc();
-						$coordinacion = $mysqli->query("SELECT nombre FROM T_COORDINACIONES WHERE Id_coordinacion = {$row['Id_coodinacion']}");
+						$coordinacion = $mysqli->query("SELECT nombre_coordinacion FROM T_COORDINACIONES WHERE Id_coordinacion = {$row['Id_coodinacion']}");
 						$coordinacionNueva = $coordinacion->fetch_assoc();
 						if ($row['caracter'] == 'LEGAL') {
 							$T_AL = $yearActual - $row['yearExpediente'];
 							if ($T_AL >= $tLegal ) { ?>
 								
 								<tr>
-									<td><?php echo $direccionNueva['nombre']; ?></td>
-									<td><?php echo $coordinacionNueva['nombre']; ?></td>								
+									<td><?php echo $direccionNueva['nombre_direccion']; ?></td>
+									<td><?php echo $coordinacionNueva['nombre_coordinacion']; ?></td>								
 									<td><?php echo $row['claveExpediente']; ?></td>
 									<td><?php echo $row['descripcionExpediente']; ?></td>
 									<td><?php echo $row['yearExpediente']; ?></td>
@@ -153,8 +153,8 @@
 							<?php
 							}else { ?>
 									<tr>
-										<td><?php echo $direccionNueva['nombre']; ?></td>
-										<td><?php echo $coordinacionNueva['nombre']; ?></td>
+										<td><?php echo $direccionNueva['nombre_direccion']; ?></td>
+										<td><?php echo $coordinacionNueva['nombre_coordinacion']; ?></td>
 										
 										<td><?php echo $row['claveExpediente']; ?></td>
 										<td><?php echo $row['descripcionExpediente']; ?></td>
@@ -171,8 +171,8 @@
 
 							if ($T_AA >= $tAdministrativo) { ?>
 								<tr>
-									<td><?php echo $direccionNueva['nombre']; ?></td>
-									<td><?php echo $coordinacionNueva['nombre']; ?></td>								
+									<td><?php echo $direccionNueva['nombre_direccion']; ?></td>
+									<td><?php echo $coordinacionNueva['nombre_coordinacion']; ?></td>								
 									<td><?php echo $row['claveExpediente']; ?></td>
 									<td><?php echo $row['descripcionExpediente']; ?></td>
 									<td><?php echo $row['yearExpediente']; ?></td>
@@ -183,8 +183,8 @@
 							<?php
 							} else { ?>
 									<tr>
-										<td><?php echo $direccionNueva['nombre']; ?></td>
-										<td><?php echo $coordinacionNueva['nombre']; ?></td>
+										<td><?php echo $direccionNueva['nombre_direccion']; ?></td>
+										<td><?php echo $coordinacionNueva['nombre_coordinacion']; ?></td>
 										
 										<td><?php echo $row['claveExpediente']; ?></td>
 										<td><?php echo $row['descripcionExpediente']; ?></td>
@@ -202,8 +202,8 @@
 							$T_AF = $yearActual - $row['yearExpediente'];
 							if ($T_AF >= $tFiscal) { ?>
 								<tr>
-									<td><?php echo $direccionNueva['nombre']; ?></td>
-									<td><?php echo $coordinacionNueva['nombre']; ?></td>								
+									<td><?php echo $direccionNueva['nombre_direccion']; ?></td>
+									<td><?php echo $coordinacionNueva['nombre_coordinacion']; ?></td>								
 									<td><?php echo $row['claveExpediente']; ?></td>
 									<td><?php echo $row['descripcionExpediente']; ?></td>
 									<td><?php echo $row['yearExpediente']; ?></td>
@@ -215,8 +215,8 @@
 							<?php
 							} else { ?>
 								<tr>
-									<td><?php echo $direccionNueva['nombre']; ?></td>
-									<td><?php echo $coordinacionNueva['nombre']; ?></td>
+									<td><?php echo $direccionNueva['nombre_direccion']; ?></td>
+									<td><?php echo $coordinacionNueva['nombre_coordinacion']; ?></td>
 									
 									<td><?php echo $row['claveExpediente']; ?></td>
 									<td><?php echo $row['descripcionExpediente']; ?></td>

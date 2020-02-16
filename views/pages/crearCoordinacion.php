@@ -147,7 +147,7 @@ if (isset($_POST['enviarCoordinacion'])) {
 	$direccion2 = $_POST["direcc"];
 
 	//Procederemos a hacer una consulta que buscara el correo del usuario
-	$buscaCoordinacion = "SELECT * FROM T_COORDINACIONES WHERE nombre='$coordinacion'";
+	$buscaCoordinacion = "SELECT * FROM T_COORDINACIONES WHERE nombre_coordinacion='$coordinacion'";
 
 	//Realizamos la consulta y anadimos $connection, ya que es la variable que creamos en nuestro archivo connection.php
 	$resultado = $mysqli->query($buscaCoordinacion);
@@ -206,11 +206,11 @@ if (isset($_POST['enviarCoordinacion'])) {
 				<option value="0" disabled selected>Selecciona una Dirección :</option>
 				<?php
 				// <--- Obtiene todas las direcciones y las ordena segun su Id
-				$query = "SELECT Id_direcciones, nombre FROM t_direcciones ORDER BY Id_direcciones"; 
+				$query = "SELECT Id_direcciones, nombre_direccion FROM t_direcciones ORDER BY Id_direcciones"; 
 				$resultado=$mysqli->query($query);
 				?>
 				<?php while($row = $resultado->fetch_assoc()) { ?>
-				<option value="<?php echo $row['Id_direcciones']; ?>"><?php echo $row['nombre']; ?></option>
+				<option value="<?php echo $row['Id_direcciones']; ?>"><?php echo $row['nombre_direccion']; ?></option>
 				<?php } ?>
 			</select>
 		</div>           

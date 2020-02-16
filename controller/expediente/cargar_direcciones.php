@@ -7,7 +7,7 @@ function getDirecciones(){
     $result = $mysqli->query($query);
     $direcciones = '<option class="opExp" value="0">Elige una Dirección</option>';
     while($row = $result->fetch_array(MYSQLI_ASSOC)){
-        $direcciones .= "<option class='opExp' value='$row[Id_direcciones]'>$row[nombre]</option>";
+        $direcciones .= "<option class='opExp' value='$row[Id_direcciones]'>$row[nombre_direccion]</option>";
     }
     return $direcciones;
     }

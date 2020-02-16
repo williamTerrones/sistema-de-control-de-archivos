@@ -131,11 +131,11 @@
 			if (isset($_POST['enviarDireccion'])) {
 				$direccion = $_POST["direc"];
 
-				$select=$db->prepare('SELECT * FROM T_DIRECCIONES WHERE nombre=:nombre');
+				$select=$db->prepare('SELECT * FROM T_DIRECCIONES WHERE nombre_direccion=:nombre');
 				$select->bindValue('nombre',$direccion);
 				$select->execute();
 				$registro=$select->fetch();
-				if($registro['nombre']!=NULL){
+				if($registro['nombre_direccion']!=NULL){
 					$usado=False;
 				}else{
 					$usado=True;
