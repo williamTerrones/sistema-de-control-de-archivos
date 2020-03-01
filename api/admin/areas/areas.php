@@ -1,6 +1,6 @@
 <?php 
 
-require_once('../access.php');
+require_once('../../access.php');
 $mysqli = new mysqli("localhost","root","","sicoa");
 $mysqli->query("SET NAMES 'utf8'");
 // <--- Obtiene todas las direcciones y las ordena segun su Id
