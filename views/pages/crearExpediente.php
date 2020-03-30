@@ -101,11 +101,6 @@
                     <?php $cont = ($cont-1); } ?>
                 </select>      
             </Div>
-            <Div class="formExpeCre" style="text-align: left;">
-                <label  style=" margin-right: 0px;margin-left: 70px;" for="formExpeCre">Tiempo de Conservación : </label>        
-                <input style="  width: 110px;" class="ExpeSelect" type="text" id="tConservaExp" name="tConservaExp" >
-                <label>años</label>           
-            </Div>
             <Div class="formExpeCre">
                 <label  style=" width: 200px;" for="formExpeCre">No. de Legajos : </label>        
                 <input class="ExpeSelect" type="text" id="noLegajosExp" name="noLegajosExp" >           
