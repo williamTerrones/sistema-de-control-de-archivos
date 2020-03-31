@@ -37,7 +37,7 @@
 					</span>
 				</div>
 
-				<form class="login100-form validate-form" action="controller_login.php" method="POST">
+				<form class="login100-form validate-form" action="controller_login.php" method="POST" enctype="multipart/form-data">
 					<div class="wrap-input100 validate-input m-b-26" >
 						<span class="label-input100">Usuario</span>
 						<input class="input100" autofocus type="text" name="usuario" placeholder="Ingresa Usuario">

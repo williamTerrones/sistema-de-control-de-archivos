@@ -33,11 +33,18 @@ $(document).ready(function(){
     $('#EnviarBoton').on('click', function(){
       
       var datos=$('#comboExpediente').serialize();
+      var form = $('#comboExpediente')[0];
+      
+      console.log("Manda datos ", datos)
+      console.log("Manda form ", new FormData(form))
 			$.ajax({
 				type:"POST",
         url: '../../controller/expediente/guardar_coordinacion.php',        				
-				data:datos,
+        data:new FormData(form),
+        processData: false,
+        contentType: false,
 				success:function(r){
+          console.log("Respuesta ", r)
 					if(r==1){
             alertify.alert("agregado con exito");
             document.getElementById("comboExpediente").reset();

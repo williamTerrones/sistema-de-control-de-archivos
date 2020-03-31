@@ -66,7 +66,7 @@
         <!--------------------------
         | Inicio Page Content Here |
         -------------------------->
-        <form class="containerCrearExp" id="comboExpediente" name="comboExpediente" action="" method="POST">
+        <form class="containerCrearExp" id="comboExpediente" name="comboExpediente" action="" method="POST" enctype="multipart/form-data">
             <Div class="formExpeCre">
                 <label style=" width: 200px;">Selecciona la Dirección : </label>        
                 <select class="ExpeSelect" id="cbx_direccion" name="cbx_direccion">
@@ -80,7 +80,7 @@
             </Div>
             <Div class="formExpeCre">
                 <label  style=" width: 200px;" for="formExpeCre">Fecha de transferencia : </label>         
-                <input class="ExpeSelect" type="date" name="fechaTransferencia" id="fechaTransferencia">    
+                <input class="ExpeSelect" type="date" name="fechaTransferencia" id="fechaTransferencia" required>    
             </Div>
             <Div class="formExpeCre">
                 <label  style=" width: 200px;" for="formExpeCre">Clave del expediente : </label>        
@@ -103,11 +103,11 @@
             </Div>
             <Div class="formExpeCre">
                 <label  style=" width: 200px;" for="formExpeCre">No. de Legajos : </label>        
-                <input class="ExpeSelect" type="text" id="noLegajosExp" name="noLegajosExp" >           
+                <input class="ExpeSelect" type="text" value="1" id="noLegajosExp" name="noLegajosExp" >           
             </Div>
             <Div class="formExpeCre">
                 <label  style=" width: 200px;" for="formExpeCre">No. de Hojas : </label>        
-                <input class="ExpeSelect" type="text" id="noHojasExp" name="noHojasExp" >           
+                <input class="ExpeSelect" type="text" value="1" id="noHojasExp" name="noHojasExp" >           
             </Div>
 
             <Div class="formExpeCre">
@@ -119,6 +119,12 @@
                         <option class="opExp"value="FISCAL">FISCAL</option>
                 </select>           
             </Div>
+
+            <Div class="formExpeCre">
+                <label style=" width: 200px;" for="formExpeCre">Archivo (PDF)</label>
+                <input style="" class="ExpeSelect" type='file' name='archivo' id="archivo" accept='application/pdf'>        
+            </Div>
+
             
             <button id="EnviarBoton" name="EnviarBoton" class="EnviarBoton2  btn-danger " style="alinig" >Guardar</button>
         
