@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-02-2020 a las 00:31:17
+-- Tiempo de generación: 31-03-2020 a las 02:20:34
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 7.1.7
 
@@ -34,6 +34,10 @@ CREATE TABLE `t_coordinaciones` (
   `nombre_coordinacion` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `t_coordinaciones`
+--
+
 -- --------------------------------------------------------
 
 --
@@ -44,6 +48,10 @@ CREATE TABLE `t_direcciones` (
   `Id_direcciones` int(11) NOT NULL,
   `nombre_direccion` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `t_direcciones`
+--
 
 -- --------------------------------------------------------
 
@@ -62,9 +70,13 @@ CREATE TABLE `t_expediente` (
   `tiempodeConservacion` varchar(255) DEFAULT NULL,
   `legajos` varchar(255) DEFAULT NULL,
   `hojas` varchar(255) DEFAULT NULL,
-  `caracter` varchar(40) DEFAULT NULL
+  `caracter` varchar(40) DEFAULT NULL,
+  `estatus_expediente` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `t_expediente`
+--
 -- --------------------------------------------------------
 
 --
@@ -80,9 +92,6 @@ CREATE TABLE `t_usuarios` (
 --
 -- Volcado de datos para la tabla `t_usuarios`
 --
-
-INSERT INTO `t_usuarios` (`Id_usuarios`, `nombre`, `clave`) VALUES
-(2, 'willi', '$2y$10$PVWmuk2iH7wUdWzjh7BxheYnhYlxe5PBv4R77qQwWFpxZPt1KnPhK');
 
 --
 -- Índices para tablas volcadas
@@ -121,17 +130,17 @@ ALTER TABLE `t_usuarios`
 -- AUTO_INCREMENT de la tabla `t_coordinaciones`
 --
 ALTER TABLE `t_coordinaciones`
-  MODIFY `Id_coordinacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `Id_coordinacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT de la tabla `t_direcciones`
 --
 ALTER TABLE `t_direcciones`
-  MODIFY `Id_direcciones` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `Id_direcciones` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT de la tabla `t_expediente`
 --
 ALTER TABLE `t_expediente`
-  MODIFY `Id_expediente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `Id_expediente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `t_usuarios`
 --
