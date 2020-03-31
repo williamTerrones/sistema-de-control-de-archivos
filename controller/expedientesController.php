@@ -22,6 +22,14 @@ class ExpedientesController {
 		return $this->expedientes;
 	}
 
+	public function actualizarEstatusExpediente($id_expediente, $estatus) {
+		
+		$sql = "UPDATE $this->table SET estatus_expediente = '$estatus' WHERE Id_expediente = '$id_expediente'";
+		$guardar = $this->db->query($sql);
+
+		return $guardar ? true : false;
+	}
+
 	public function obtenerExpediente($id){
 		$sql = "SELECT * FROM $this->table WHERE id_expediente = '$id'";
 		$sentencia = $this->db->query($sql);
