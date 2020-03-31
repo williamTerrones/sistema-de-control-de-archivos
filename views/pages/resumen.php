@@ -24,7 +24,7 @@
 				<img style=" border-radius: 25%;" src="../../styles/adminlte/dist/img/user8-128x128.jpg" class="img-circle" alt="User Image">
 			</div>
 			<div class="pull-left info">
-				<p>Ebert</p>
+				<p>Admin</p>
 				<!-- Status -->
 				<a ><i class="fa fa-circle text-success"></i> Online</a>	
 			</div>

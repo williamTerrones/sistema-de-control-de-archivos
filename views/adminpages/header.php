@@ -13,7 +13,7 @@
           <li class=" user user-menu" style="display: inline-flex;">
             <a href="#" class="user-menu" style=" margin-right:0px; whidth: 10px;display:block; ">
               <img src="../../styles/adminlte/dist/img/user8-128x128.jpg" class="user-image" style=" border-radius: 25%;" alt="User Image">
-              <span class="hidden-xs" style="font-size: 17px;">Ebert</span>
+              <span class="hidden-xs" style="font-size: 17px;">Admin</span>
             </a>
             <a href="#" class="dropdown-toggle fa fa-caret-down" data-toggle="dropdown" style=" margin-right:30px; whidth: 1px;">
             
