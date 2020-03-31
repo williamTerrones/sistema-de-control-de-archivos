@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-03-2020 a las 02:20:34
+-- Tiempo de generación: 31-03-2020 a las 06:35:30
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 7.1.7
 
@@ -38,6 +38,8 @@ CREATE TABLE `t_coordinaciones` (
 -- Volcado de datos para la tabla `t_coordinaciones`
 --
 
+
+
 -- --------------------------------------------------------
 
 --
@@ -52,6 +54,7 @@ CREATE TABLE `t_direcciones` (
 --
 -- Volcado de datos para la tabla `t_direcciones`
 --
+
 
 -- --------------------------------------------------------
 
@@ -71,12 +74,14 @@ CREATE TABLE `t_expediente` (
   `legajos` varchar(255) DEFAULT NULL,
   `hojas` varchar(255) DEFAULT NULL,
   `caracter` varchar(40) DEFAULT NULL,
-  `estatus_expediente` tinyint(4) NOT NULL DEFAULT '0'
+  `estatus_expediente` tinyint(4) NOT NULL DEFAULT '0',
+  `url_archivo` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `t_expediente`
 --
+
 -- --------------------------------------------------------
 
 --
@@ -92,6 +97,7 @@ CREATE TABLE `t_usuarios` (
 --
 -- Volcado de datos para la tabla `t_usuarios`
 --
+
 
 --
 -- Índices para tablas volcadas
@@ -140,7 +146,7 @@ ALTER TABLE `t_direcciones`
 -- AUTO_INCREMENT de la tabla `t_expediente`
 --
 ALTER TABLE `t_expediente`
-  MODIFY `Id_expediente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Id_expediente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT de la tabla `t_usuarios`
 --
